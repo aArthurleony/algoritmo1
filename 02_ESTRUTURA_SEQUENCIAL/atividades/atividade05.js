@@ -1,9 +1,6 @@
-const valorPor15Minstr = prompt("Digite o valor de cada 15 minutos de uso:");
-const tempoDeUsoMinstr = prompt("Digite o tempo de uso em minutos:");
+var valor15min = prompt("Digite o valor de cada 15min: ")
+var tempocliente = prompt("Tempo de uso do cliente:")
+var fracoes = Math.ceil(tempocliente / 15)
+var valorpagar = valor15min * fracoes
 
-const valorPor15Min = +valorPor15Min
-const tempoDeUsoMin = +tempoDeUsoMin
-
-const valorTotal = Math.ceil(tempoDeUsoMin / 15) * valorPor15Min;
-
-alert("O valor a ser pago é R$" +valorTotal.toFixed(2))
+alert("O valor a ser pago pelo cliente será de: "+valorpagar)
