@@ -9,21 +9,38 @@
 <body>
     <script>
 
-    var valor1  = prompt("Digite o primeiro valor: ")
-    var valor2 = prompt("Digite o segundo valor: ")
+    // var valor1  = prompt("Digite o primeiro valor: ")
+    // var valor2 = prompt("Digite o segundo valor: ")
 
-    if(valor1 > valor2){
-        alert("O maior número é o: "+valor1)
+    // if(valor1 > valor2){
+    //     alert("O maior número é o: "+valor1)
+    // }
+    // if(valor1 < valor2){
+    //     alert("O maior número é o: "+valor2)
+    // }else{
+    //     alert("Digite dois números distintos e diferentes de  0")
+    //     window.location.reload(true)
+    // }
+
+    var variavel1 = Number(prompt("Digite o primeiro valor: "))
+    var variavel2 = Number(prompt("Digite o segundo valor: "))
+    if(variavel1 === 0 || isNaN(variavel1)){
+        alert("O valor "+variavel1+" não é válido para o sistema")
+        location.reload()
+    }else if(variavel2 === 0 || isNaN(variavel2)){
+        alert("O valor "+variavel2+" não é válido para o sistema")
+        location.reload()
     }
-    if(valor1 < valor2){
-        alert("O maior número é o: "+valor2)
+
+    //lógica
+    if(variavel1 > variavel2){
+        alert("Número "+variavel1+" maior")
+    }else if(variavel2 > variavel1){
+        alert("Número "+variavel2+" maior")
     }else{
-        alert("Digite dois números distintos")
+        alert("Não é possível fazer a comparação entre os valores "+variavel1+ "-"+variavel2)
+        location.reload()
     }
-    
- 
-
-
     </script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n1 = Number(prompt("Digite a primeira nota: "))
+        var n2 = Number(prompt("Digite a segunda nota: "))
+        var n3 = Number(prompt("Digite a terceira nota: "))
+        media = (n1 + n2 + n3) / 3
+
+        if(isNaN(n1)){
+            alert("O valor "+n1+" não é válido para nosso sistema")
+            window.location.reload(true)
+        }
+        else if(isNaN(n2)){
+            alert("O valor "+n2+" não é válido para nosso sistema")
+            window.location.reload(true)
+        }
+        else if (isNaN(n3)){
+            alert("O valor "+n3+" não é válido para nosso sistema")
+            window.location.reload(true)
+        }else{
+            alert("Média aritmética: "+media.toFixed(2))
+            window.location.reload(true)
+        }
+         
+
+    </script>
+</body>
+</html>
