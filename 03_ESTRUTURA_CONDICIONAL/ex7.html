@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var valor = Number(prompt("Digite o valor a ser sacado: \nnotas disponíveis:\nR$ 10\nR$ 50\nR$ 100"))
+       
+        if(valor % 10 == 0){
+        var nota1 = valor / 100
+        var nota2 = valor % 100 / 50
+        var nota3 = valor % 100 % 50 / 10
+        alert("notas: "+ parseInt(nota1)+" notas de 100\nnotas: "+ parseInt(nota2)+" notas de 50 \nnotas: "+ parseInt(nota3)+"notas de 10")
+
+        
+        }else{
+            alert("digite um valor que possa ser sacado com as notas disponíveis no sistema")
+            window.location.reload(true)
+        }
+        window.location.reload(true)
+    </script>
+</body>
+</html>
+ 
