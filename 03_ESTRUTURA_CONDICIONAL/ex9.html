@@ -12,12 +12,12 @@
         var velocidade = Number(prompt("Qual a velocidade permitida na estrada: "))
         var condutor = Number(prompt("Qual a velocidade do condutor: "))
         var multa1 = velocidade * 1.20
-        
-        if(isNaN(velocidade) || velocidade === 0){
+
+        if(isNaN(velocidade) || velocidade <= 0){
             alert("ERRO")
             location.reload()
         }
-        else if(isNaN(condutor) || condutor === 0){
+        else if(isNaN(condutor) || condutor <= 0){
             alert("ERRO")
             location.reload()
         }
