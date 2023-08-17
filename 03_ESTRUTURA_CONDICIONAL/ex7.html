@@ -9,8 +9,10 @@
 <body>
     <script>
         var valor = Number(prompt("Digite o valor a ser sacado: \nnotas disponíveis:\nR$ 10\nR$ 50\nR$ 100"))
-       
-        if(valor % 10 == 0){
+        if(isNaN(valor) || valor === 0){
+            alert("ERRO")
+        }
+        else if(valor % 10 == 0){
         var nota1 = valor / 100
         var nota2 = valor % 100 / 50
         var nota3 = valor % 100 % 50 / 10
