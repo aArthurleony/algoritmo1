@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var lado1 = Number(prompt("Digite o valor do primeiro lado: "))
+        var lado2 = Number(prompt("Digite o valor do segundo lado: "))
+        var lado3 = Number(prompt("Digite o valor do terceiro lado: "))
+        
+        if(isNaN(lado1) || (lado1) == 0){
+            alert("erro")
+            location.reload()
+        }
+        else if(isNaN(lado2) || (lado2) == 0){
+            alert("erro")
+            location.reload()
+        }
+        else if(isNaN(lado3) || (lado3) == 0){
+            alert("erro")
+            location.reload()
+        }
+        else if(lado3 > lado1 + lado2 || lado1 > lado2 + lado3 || lado2 > lado1 + lado3){
+            alert("Um dos lados não pode ser maior que a soma dos outros dois")
+        }
+        else if(lado1 === lado2 && lado2 === lado3 && lado1 === lado3){
+            alert("Triângulo equilátero(3 lados iguais)")
+        }else if(lado1 === lado2 && lado2 != lado3 && lado3 != lado1 || lado1 === lado3 && lado1 != lado2 && lado3 != lado2 || lado1 != lado2 && lado1 != lado3 && lado2 === lado3 && lado3 === lado2){
+            alert("Triângulo isósceles(2 lados iguais)")
+        }else if(lado1 != lado2 && lado2 != lado3 && lado1 != lado3){
+            alert("Triângulo escaleno(3 lados diferentes)")
+
+
+        }
+        window.location.reload(true)
+    </script>
+</body>
+</html>
