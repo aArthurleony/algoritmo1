@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var num
+        do{
+            num = Number(prompt("Digite um número"))
+            if(num === 0 || isNaN(num))
+            alert("digite um numero valido")
+
+        }while(num === 0 || isNaN(num))
+        
+        alert("Os numeros pares entre 1 e "+num)
+        for(let i = 0; i<=num;i++){
+            if(i%2 === 0){
+                document.write("<br>"+i)
+            }
+        }
+
+        // var i = 0
+        // if(isNaN(numero) || numero === 0){
+        //     alert("ERRO")
+        //     window.location.reload(true)
+        // }
+        // for(var i = 0 ; numero >=i ; i++)
+        // if(i %2 == 0){
+        //     document.write("<br>"+i)
+        // }
+
+    </script>
+</body>
+</html>

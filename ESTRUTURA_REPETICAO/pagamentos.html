@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var conta
+        var valor
+        var i = 0
+        var sair
+        var soma = 0
+        alert("QUANDO DESEJAR CANCELAR, DIGITE 0:")
+        do{
+            conta = prompt("Qual a descrição da conta? ")
+            valor = Number(prompt("Qual o valor da conta ?"))
+        if(isNaN(valor) || valor === 0 ){
+            var sair = confirm("deseja finalizar?")
+        if(sair){
+            break
+         }else{
+             continue
+        }
+         }
+        soma = soma + valor
+        document.write("<br>"+conta +"--valor: R$"+valor)
+    
+        
+        }while(true)
+
+        document.write("<br>total:<br> R$ "+soma)
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

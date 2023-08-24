@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var i
+        // var divisor = 0
+        // var numero = Number(prompt("DIGITE UM NÚMERO:"))
+        // for(let i = 1; i <= numero; i++){
+        //     if(numero %i === 0){
+        //         divisor++
+        //     }
+        // }
+        // if(divisor === 2){
+        //     alert("numero "+numero+" é primo")
+        // }else {
+        //     ("O número "+numero+" não é primo")
+        // }
+        // window.location.reload(true)
+        let num
+        let divisores = 0
+
+        do{
+            num = Number(prompt("Digite um número: "))
+            if(num <= 0 || isNaN(num)){
+                alert("digite um numero válido")
+            }
+            
+        }while(num <= 0 || isNaN(num))
+        debugger
+        for(let i = 0;num; i ++){
+            if(num % 2 === 0){
+                divisores++
+
+            }
+
+        }
+        if(divisores === 2){
+            alert("o número"+num+"é primo")
+        }else{
+            alert("O número"+num+"não é primo")
+        }
+  
+
+    </script>
+</body>
+</html>

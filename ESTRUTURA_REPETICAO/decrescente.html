@@ -8,17 +8,17 @@
 </head>
 <body>
     <script>
-        var numero = Number(prompt("DIGITE UM NUMERO VÁ: "))
-        var resultado
-        if(isNan(numero) || numero > 10){
-            alert("Digite um número menor do que 10")
+
+        var numero = Number(prompt("Digite um valor: "))
+        var i = 1
+        if(isNaN(numero) || numero <= 0){
+            alert("ERRO")
             location.reload()
         }
-
-        for (var i = 0; i <= 10; i++){
-            resultado = numero * i 
-            document.write(numero +" x "+i+" = "+resultado+"<br>")
+        for(var i = 1 ; numero >= i ; numero--){
+         document.write("<br>"+numero)
         }
+
     </script>
 </body>
 </html>
