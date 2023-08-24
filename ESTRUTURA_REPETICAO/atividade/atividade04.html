@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num
+        var fatorial = 1
+
+        num = Number(prompt("Digite um número"))
+        for(var i = 1; i < num; i++){
+            fatorial = fatorial * i
+            if(i >= num){
+            document.write(i)
+            }else{
+            document.write("<br>["+i+"]")
+            }
+
+        }
+        document.write("<br>O fatorial de ["+num+"] é: "+"<br>"+fatorial)
+
+    </script>
+</body>
+</html> 

@@ -9,6 +9,23 @@
 <body>
     <script>
         var num
+        var divisores = 0
+        var i
+        num = parseInt(prompt("DIGITE UM NUMERO"))
+        for(let i = 1; i < num;i++){
+            if(num % i === 0){
+            divisores = divisores + i
+            document.write(i+"<br>")
+            }
+          
+        }
+        if(divisores == num){
+            document.write("o número "+num+" é perfeito")
+        }else{
+            document.write("o número "+num+" nao é perfeito")
+        }
+
+
 
     </script>
 </body>
