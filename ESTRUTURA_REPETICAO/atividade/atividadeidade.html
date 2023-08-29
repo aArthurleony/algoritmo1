@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var idade
+        var media
+        var Maioridade = 0
+        var soma = 0
+
+        for(let i = 1; i <= 10;i++){
+            idade = Number(prompt("Digite a idade: "))
+            soma = soma + idade
+            document.write(i+"°="+idade+"<br>")
+            if(idade > 18){
+                Maioridade++
+            }
+        }
+        media = soma / 10
+        document.write("soma = "+soma+"<br>"+"Média = "+media+"<br>")
+        document.write(Maioridade+" de 10 são maior de idade")
+        
+
+    </script>
+</body>
+</html>

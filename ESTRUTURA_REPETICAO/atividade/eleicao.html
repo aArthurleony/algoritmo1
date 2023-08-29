@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var candidato1 = 0
+        var candidato2 = 0
+        var candidato3 = 0
+        var candidato4 = 0
+        var branco = 0
+        var nulo = 0
+        var sair
+        var voto
+        var qtd = 0
+
+        alert("QUANDO DESEJAR CANCELAR, DIGITE 0:")
+        do{
+        voto = Number(prompt("Digite um número\n1\n2\n3\n4\n5\n6"))
+
+        if(isNaN(voto) || voto === 0 ){
+            var sair = confirm("deseja finalizar?")
+        if(sair == true){
+            break;
+         }else{
+             continue;
+        }
+         }if(voto === 1){
+            candidato1++
+            qtd++
+        }else if(voto === 2){
+            candidato2++
+            qtd++
+        }else if(voto === 3){
+            candidato3++
+            qtd++
+        }else if(voto === 4){
+            candidato4++
+            qtd++
+        }else if(voto === 5){
+            branco++
+            qtd++
+        }else if(voto === 6){
+            nulo++
+            qtd++
+        }
+        }while(true)
+        document.write("<br>QUANTIDADE TOTAL DE VOTOS : "+qtd)
+        document.write("<br>votos para candidato 1: "+candidato1)
+         document.write("<br>votos para candidato 2: "+candidato2)
+         document.write("<br>votos para candidato 3: "+candidato3)
+         document.write("<br>votos para candidato 4: "+candidato4)
+         document.write("<br>votos para nulo: "+nulo)
+         document.write("<br>votos para branco : "+branco)
+
+
+    </script>
+</body>
+</html>
