@@ -12,12 +12,16 @@
         var fatorial = 1
 
         num = Number(prompt("Digite um número"))
+        if(isNaN(num) || num === 0){
+            alert("ERRO!\nDigite um número válido")
+            location.reload()
+        }
         for(var i = 1; i < num; i++){
             fatorial = fatorial * i
             if(i >= num){
             document.write(i)
             }else{
-            document.write("<br>["+i+"]")
+            document.write("<br>["+i+"]<br>  X")
             }
 
         }
@@ -25,4 +29,4 @@
 
     </script>
 </body>
-</html> 
+</html>
