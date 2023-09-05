@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positivo e negativo</title>
+</head>
+<body>
+    <script>
+        let vetor = []
+        let vetorn = []
+        let vetorp = []
+
+
+        debugger
+        for(let i = 0; i < 4;i++){
+            vetor[i] = Number(prompt("Digite um número: "))
+        
+        if(vetor[i] >= 0){
+            vetorp[i] = vetor[i]
+        }else if(vetor[i] < 0){
+            vetorn[i] = vetor[i]
+        }
+    }
+        document.write("Vetores: "+vetor)
+        document.write("<br>Números positivos: "+vetorp)
+        document.write("<br>Números negativos: "+vetorn)
+        console.log(vetorp, vetorn)
+
+
+
+
+    </script>
+</body>
+</html>
