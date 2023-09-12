@@ -9,18 +9,23 @@
 <body>
     <script>
         let vetor = []
-        let maior = 0
-        debugger
+        let aux
         for(let i = 0;i < 4;i++){
             vetor[i] = Number(prompt("Digite um valor: "))
-        if(vetor > maior){
-            maior = vetor
         }
         document.write(vetor)
 
-        }
-        document.write("<br>a ordem é: "+maior)
+        for(let i = 0;i < 4;i++){
+            for(let j = 0; j < 4;j++){
+                if(vetor[j] < vetor[j+1]){
+                    aux = vetor[j]
+                    vetor[j] = vetor[j+1]
+                    vetor[j+1] = aux
 
+                }
+            }
+        }
+        document.write("<br>nova ordem: "+vetor)
 
 
     </script>

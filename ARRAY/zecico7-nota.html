@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GABARITO</title>
+</head>
+<body>
+    <script>
+        let gabarito = [] //gabarito de cada questão
+        let questao = 1 // numero da questão
+        let aluno  // numero aluno
+        let resposta = [] //resposta do aluno
+        let pontos  = 0 // nota final do aluno
+        let totalAprovado = 0
+        let perCAP
+
+        for(let i = 0;i < 10;i++){
+            gabarito[i] = prompt("qual a resposta da "+(i + 1)+" questão:")
+        }
+        document.write("o gabarito é: "+gabarito+"<br>")
+        for(let i = 0; i < 10; i++){
+            aluno = Number(prompt("Digite o número do aluno: "))
+            pontos = 0
+            for(let j = 0; j < 10; j++){
+                resposta[j] = prompt("Digite a resposta do aluno na "+(j + 1)+" questão")
+                if(resposta[j] === gabarito[j]){
+                pontos++
+                }
+            }
+            if(pontos >= 6){
+                totalAprovado++
+            }
+            document.write("a nota do aluno "+aluno+" foi "+pontos+"<br>")
+        }
+
+        perCAP = totalAprovado * 100 / 10
+        document.write("o percentual de aprovados "+perCAP+"%")
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
