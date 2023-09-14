@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a
+        let b
+        let nota1 = Number(prompt("Digite o primeiro valor"))
+        let nota2 = Number(prompt("Digite o segundo valor"))
+        let nota3 = Number(prompt("Digite o terceiro valor"))
+        let opcao = prompt("deseja realizar qual o operação?\n(a)MÉDIA ARITMÉTICA\n(p)MÉDIA PONDERADA")
+        opcao.toUpperCase()
+        function validar(nota1,nota2,nota3){
+            if(isNaN(nota1) || nota1 > 10 ){
+                alert("digite uma nota valida\n(deve ser menor que 10)")
+            location.reload()
+            }
+            else if(isNaN(nota2) || nota2 > 10){
+                alert("digite uma nota válida\n(deve ser menor que 10)")
+            location.reload()
+            }
+            else if(isNaN(nota3) || nota3 > 10){
+                alert("digite uma nota válida\n(deve ser menor que 10)")
+            location.reload()
+            }
+            return validar
+        }
+        let resultado = validar(nota1, nota2, nota3)
+
+        if(opcao ==  'a' && nota1 <= 10 && nota2 <= 10 && nota3 <= 10){
+            let a = (nota1 + nota2 + nota3) / 3
+            alert(a)
+        }else if(opcao == 'p' && nota1 <= 10 && nota2 <= 10 && nota3 <= 10){
+            let p = (nota1 * 5 + nota2 * 3 + nota3 * 2) / 10
+            alert(p)
+        }
+        window.location.reload()
+
+
+    </script>
+</body>
+</html>

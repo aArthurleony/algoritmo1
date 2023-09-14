@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        debugger
+        let nome = []
+        let salario = []
+        let tempo = []
+        let salarionv
+        for(let i = 0; i < 5;i++){
+            nome[i] = prompt("digite o nome do "+(i + 1)+ "° funcionario:")
+            salario[i] = Number(prompt("digite o salário do "+(i + 1)+"° funcionario:"))
+            tempo[i] = Number(prompt("digite o tempo de serviço do "+(i + 1)+"° funcionario:"))
+        }
+        document.write("FUNCIONÁRIOS QUE NÃO TERÃO AUMENTO:<br>")
+        for(let i = 0; i < 5; i++){
+            if(salario[i] > 400 && tempo[i] < 5){
+                document.write("o "+nome[i]+" não terá aumento<br>")
+            }
+        }
+        document.write("FUNCIONÁRIOS QUE TERÃO AUMENTO:<br>")
+        for(let i = 0; i < 5;i++){
+            if(tempo[i] > 5 && salario[i] < 400){
+                salarionv = salario[i] * 1.35
+                document.write(nome[i]+", novo salário = "+salario[i]+"R$<br>")
+            }else if(tempo[i] > 5){
+                salarionv = salario[i] * 1.25
+                document.write(nome[i]+", novo salário = "+salario[i]+"R$<br>")
+            }else if(salario[i] < 400){
+                salarionv = salario[i] * 1.15
+                document.write(nome[i]+", novo salário = "+salario[i]+"R$<br>")
+            }
+        }
+
+        
+
+
+
+    </script>
+</body>
+</html>

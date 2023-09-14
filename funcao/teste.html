@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let arroba 
+let seguidores
+let produto
+let valor
+let postar
+
+
+arroba = prompt("Digite o seu @: ")
+seguidores = Number(prompt("Digite a quantidade de seguidores que você possui: "))
+produto = prompt("digite o produto que você irá vender")
+valor = Number(prompt("digite o valor do produto: "))
+
+    if(seguidores >= 5000 && seguidores < 20000){
+        function Calculadora(seguidores,valor,postar,arroba,produto){
+        valor = valor * 1.05
+        document.write("@"+arroba+"<br>seguidores = "+seguidores+"<br>O produto "+produto+" será vendido no valor de: R$"+valor)
+        }
+
+    }else if(seguidores >= 20000 && seguidores < 50000){
+        function Calculadora(seguidores,valor,postar,arroba,produto){
+        postar = prompt("você irá postar?\n(1)story\n(2)reel\n(3)não irei postar")
+        if(postar == '1'){
+            valor = (valor * 1.10) * 1.05
+            document.write("@"+arroba+"<br>seguidores = "+seguidores+"<br>O produto "+produto+" será vendido no valor de: R$"+valor)
+        }else if(postar == '2'){
+            valor = (valor * 1.10) * 1.10
+            document.write("@"+arroba+"<br>seguidores = "+seguidores+"<br>O produto "+produto+" será vendido no valor de: R$"+valor)
+        }else{
+            valor = valor * 1.10
+            document.write("@"+arroba+"<br>seguidores = "+seguidores+"<br>O produto "+produto+" será vendido no valor de: R$"+valor)
+        }
+    }
+        
+
+    }else if(seguidores >= 50000 && seguidores < 100000){
+        function Calculadora(seguidores,valor,postar,arroba,produto){
+        postar = prompt("você irá postar?\n(1)story\n(2)reel(3)não irei postar")
+        if(postar == '1'){
+            valor = (valor * 1.15) * 1.05
+            document.write("@"+arroba+"<br>seguidores = "+seguidores+"<br>O produto "+produto+" será vendido no valor de: R$"+valor)
+        }else if(postar == '2'){
+            valor = (valor * 1.15) * 1.10
+            document.write("@"+arroba+"<br>seguidores = "+seguidores+"<br>O produto "+produto+" será vendido no valor de: R$"+valor)
+        }else{
+            valor = valor * 1.15
+            document.write("@"+arroba+"<br>seguidores = "+seguidores+"<br>O produto "+produto+" será vendido no valor de: R$"+valor)
+        }
+    }
+
+
+    }else if(seguidores > 100000){
+        function Calculadora(seguidores,valor,postar,arroba,produto){
+        postar = prompt("você irá postar?\n(1)story\n(2)reel(3)não irei postar")
+        if(postar == '1'){
+            valor = (valor * 1.25) * 1.05
+            document.write("@"+arroba+"<br>seguidores = "+seguidores+"<br>O produto "+produto+" será vendido no valor de: R$"+valor)
+        }else if(postar == '2'){
+            valor = (valor * 1.25) * 1.10
+            document.write("@"+arroba+"<br>seguidores = "+seguidores+"<br>O produto "+produto+" será vendido no valor de: R$"+valor)
+        }else{
+            valor = valor * 1.25
+            document.write("@"+arroba+"<br>seguidores = "+seguidores+"<br>O produto "+produto+" será vendido no valor de: R$"+valor)
+        }
+    }
+}
+
+    
+
+let resultado = Calculadora(seguidores,valor,postar,arroba,produto)
+
+
+
+
+
+
+    </script>
+</body>
+</html>
