@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var X = [3, 8, 4, 2, 1, 6, 8, 7, 11, 9];
+var Y = [2, 1, 5, 12, 3, 0, 1, 4, 5, 6];
+
+// Função para verificar se um elemento existe em um vetor
+function elementoExiste(vetor, elemento) {
+  for (var i = 0; i < vetor.length; i++) {
+    if (vetor[i] === elemento) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// Função para calcular a união de X e Y
+function uniao(arr1, arr2) {
+  var resultado = arr1.slice(); // Copia o vetor X para o resultado
+
+  for (var i = 0; i < arr2.length; i++) {
+    if (!elementoExiste(resultado, arr2[i])) {
+      resultado.push(arr2[i]);
+    }
+  }
+
+  return resultado;
+}
+
+// Função para calcular a diferença entre X e Y
+function diferenca(arr1, arr2) {
+  var resultado = [];
+
+  for (var i = 0; i < arr1.length; i++) {
+    if (!elementoExiste(arr2, arr1[i])) {
+      resultado.push(arr1[i]);
+    }
+  }
+
+  return resultado;
+}
+
+// Função para calcular a soma entre X e Y
+function soma(arr1, arr2) {
+  var resultado = [];
+
+  for (var i = 0; i < arr1.length; i++) {
+    resultado.push(arr1[i] + arr2[i]);
+  }
+
+  return resultado;t
+}
+
+// Função para calcular o produto entre X e Y
+function produto(arr1, arr2) {
+  var resultado = [];
+
+  for (var i = 0; i < arr1.length; i++) {
+    resultado.push(arr1[i] * arr2[i]);
+  }
+
+  return resultado;
+}
+
+// Função para calcular a interseção entre X e Y
+function intersecao(arr1, arr2) {
+  var resultado = [];
+
+  for (var i = 0; i < arr1.length; i++) {
+    if (elementoExiste(arr2, arr1[i]) && !elementoExiste(resultado, arr1[i])) {
+      resultado.push(arr1[i]);
+    }
+  }
+
+  return resultado;
+}
+
+// Exibe os resultados usando document.write
+document.write("União -> " + uniao(X, Y).join(" | ") + "<br>");
+document.write("Diferença -> " + diferenca(X, Y).join(" | ") + "<br>");
+document.write("Soma -> " + soma(X, Y).join(" | ") + "<br>");
+document.write("Produto -> " + produto(X, Y).join(" | ") + "<br>");
+document.write("Interseção -> " + intersecao(X, Y).join(" | ") + "<br>");
+
+    </script>
+</body>
+</html>
